@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookChatHeadsPreviewer", "FacebookChatHeadsPreviewer\FacebookChatHeadsPreviewer.csproj", "{E6D955E1-488F-47DA-A38D-3669464BEDBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6D955E1-488F-47DA-A38D-3669464BEDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D955E1-488F-47DA-A38D-3669464BEDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D955E1-488F-47DA-A38D-3669464BEDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D955E1-488F-47DA-A38D-3669464BEDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CFDE1F2-BDD9-400C-8CF6-A283AFBD60EB}
+	EndGlobalSection
+EndGlobal
