@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ViewModel="clr-namespace:FacebookChatHeadsPreviewer.ViewModels"
         mc:Ignorable="d"
-        Title="FB Messenger Chat Heads Preview" Height="450" Width="800">
+        Title="FB Messenger Chat Heads Preview" Height="100" Width="200" ResizeMode="NoResize">
     <Window.DataContext>
         <ViewModel:MainWindowViewModel/>
     </Window.DataContext>
