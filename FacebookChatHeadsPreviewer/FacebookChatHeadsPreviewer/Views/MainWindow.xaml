@@ -5,12 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ViewModel="clr-namespace:FacebookChatHeadsPreviewer.ViewModels"
         mc:Ignorable="d"
-        Title="FB Messenger Chat Heads Preview" Height="100" Width="200" ResizeMode="NoResize">
+        Title="FB Messenger Chat Heads Preview" Background="Transparent" AllowsTransparency="True" OpacityMask="White" WindowStyle="None" Height="100" Width="200" ResizeMode="NoResize">
     <Window.DataContext>
         <ViewModel:MainWindowViewModel/>
     </Window.DataContext>
-    
+    <Window.Resources>
+        <Style x:Key="NMOStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Button Style="{DynamicResource NMOStyle}" HorizontalAlignment="Left" Height="50" Margin="6,6,0,0" VerticalAlignment="Top" Width="50">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/qmbutton.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+
+
     </Grid>
 </Window>
