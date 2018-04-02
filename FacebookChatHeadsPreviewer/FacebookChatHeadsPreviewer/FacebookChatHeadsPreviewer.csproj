@@ -102,5 +102,8 @@
   <ItemGroup>
     <Resource Include="Resources\qmbutton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

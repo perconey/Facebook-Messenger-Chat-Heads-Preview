@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ViewModel="clr-namespace:FacebookChatHeadsPreviewer.ViewModels"
         mc:Ignorable="d"
-        Title="FB Messenger Chat Heads Preview" Background="Transparent" AllowsTransparency="True" OpacityMask="White" WindowStyle="None" Height="100" Width="200" ResizeMode="NoResize">
+        Title="FB Messenger Chat Heads Preview" Background="Transparent"
+        AllowsTransparency="True" OpacityMask="White" WindowStyle="None" Height="400" Width="400" ResizeMode="NoResize">
     <Window.DataContext>
         <ViewModel:MainWindowViewModel/>
     </Window.DataContext>
@@ -31,7 +32,8 @@
     </Window.Resources>
 
     <Grid>
-        <Button Style="{DynamicResource NMOStyle}" HorizontalAlignment="Left" Height="50" Margin="6,6,0,0" VerticalAlignment="Top" Width="50">
+        <Image Source="/Resources/cm.png" Margin="66,-65,98,225"/>
+        <Button Command="{Binding SelectFileClick}" Style="{DynamicResource NMOStyle}" HorizontalAlignment="Left" Height="50" Margin="307,30,0,0" VerticalAlignment="Top" Width="50">
             <Button.Background>
                 <ImageBrush ImageSource="/Resources/qmbutton.png"></ImageBrush>
             </Button.Background>
