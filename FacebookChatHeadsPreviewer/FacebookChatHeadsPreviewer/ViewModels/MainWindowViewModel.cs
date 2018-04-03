@@ -12,11 +12,19 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 {
     class MainWindowViewModel : INotifyPropertyChanged
     {
+        public string check { get; set; }
         public ICommand SelectFileClick { get; set; }
+        public ICommand DebugButtonClick { get; set; }
 
         public MainWindowViewModel()
         {
             SelectFileClick = new RelayCommand(onSelectFileClick, o => true);
+            DebugButtonClick = new RelayCommand(onDebugButtonClick, o => true);
+        }
+
+        public void onDebugButtonClick(object o)
+        {
+            MessageBox.Show(check);
         }
 
         public void onSelectFileClick(object o)
@@ -26,7 +34,12 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 DefaultExt = ".png",
                 Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg"
             };
-            bool? result = dlg.ShowDialog();
+            bool? dialogOK = dlg.ShowDialog();
+            if(dialogOK == true)
+            {
+                string filename = dlg.FileName;
+                check = dlg.FileName;
+            }
 
         }
         public event PropertyChangedEventHandler PropertyChanged;
