@@ -38,7 +38,12 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             if(dialogOK == true)
             {
                 string filename = dlg.FileName;
+                //Debug
                 check = dlg.FileName;
+            }
+            else
+            {
+                //action on no select
             }
 
         }
