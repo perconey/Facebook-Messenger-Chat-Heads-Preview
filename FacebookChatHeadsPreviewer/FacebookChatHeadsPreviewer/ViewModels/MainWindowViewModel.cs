@@ -36,6 +36,17 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 string path = dlg.FileName;
                 Image img = Image.FromFile(path);
                 var validator = new ImageInfoValidator(img);
+
+                //image is square
+                if(validator.isEligible)
+                {
+
+                }
+                //image is not square
+                else
+                {
+
+                }
             }
             else
             {

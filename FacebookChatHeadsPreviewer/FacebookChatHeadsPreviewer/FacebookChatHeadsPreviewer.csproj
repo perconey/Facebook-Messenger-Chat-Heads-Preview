@@ -57,7 +57,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Logic\ImageInfoValidator.cs" />
+    <Compile Include="ViewModels\HeadPreviewWindowViewModel.cs" />
+    <Compile Include="Views\HeadPreviewWindow.xaml.cs">
+      <DependentUpon>HeadPreviewWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowService.cs" />
+    <Page Include="Views\HeadPreviewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
