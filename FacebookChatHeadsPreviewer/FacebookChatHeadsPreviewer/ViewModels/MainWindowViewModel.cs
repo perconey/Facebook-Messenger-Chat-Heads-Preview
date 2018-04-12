@@ -1,10 +1,12 @@
-﻿using System.ComponentModel;
+﻿using FacebookChatHeadsPreviewer.Logic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows;
 using System.Windows.Input;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
-    class MainWindowViewModel : INotifyPropertyChanged
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
         public string check { get; set; }
         public ICommand SelectFileClick { get; set; }
@@ -31,9 +33,9 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             bool? dialogOK = dlg.ShowDialog();
             if(dialogOK == true)
             {
-                string filename = dlg.FileName;
-                //Debug
-                check = dlg.FileName;
+                string path = dlg.FileName;
+                Image img = Image.FromFile(path);
+                var validator = new ImageInfoValidator(img);
             }
             else
             {
