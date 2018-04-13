@@ -45,7 +45,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 //image is not square
                 else
                 {
-
+                    MessageBox.Show("Your image height/width ratio is not correct. You only can use square photos on Facebook");
                 }
             }
             else
