@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
-    class HeadPreviewWindowViewModel : INotifyPropertyChanged
+    public class HeadPreviewWindowViewModel : INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
