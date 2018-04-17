@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,17 @@ namespace FacebookChatHeadsPreviewer.ViewModels
     public class HeadPreviewWindowViewModel : INotifyPropertyChanged
     {
         private string _imgpath;
+
+        public HeadPreviewWindowViewModel(String path)
+        {
+            imgpath = path;
+        }
+
+        public HeadPreviewWindowViewModel()
+        {
+
+        }
+
         public string imgpath
         {
             get { return _imgpath; }

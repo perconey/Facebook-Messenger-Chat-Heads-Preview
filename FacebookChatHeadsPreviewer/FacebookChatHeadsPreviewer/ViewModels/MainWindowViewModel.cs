@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Input;
-using FacebookChatHeadsPreviewer;
 using FacebookChatHeadsPreviewer.Views;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
@@ -45,7 +44,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 if(validator.isEligible)
                 {
                     var win = new HeadPreviewWindow();
-                    win.DataContext = new HeadPreviewWindowViewModel();
+
+                    win.DataContext = new HeadPreviewWindowViewModel(path);
                     win.Show();
                     
                 }
