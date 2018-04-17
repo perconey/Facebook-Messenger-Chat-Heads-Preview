@@ -10,7 +10,9 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        //debug
         public string check { get; set; }
+
         public ICommand SelectFileClick { get; set; }
         public ICommand DebugButtonClick { get; set; }
 
@@ -42,7 +44,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 //image is square
                 if(validator.isEligible)
                 {
-                    var win = new HeadPreviewWindow(img);
+                    var win = new HeadPreviewWindow();
                     win.DataContext = new HeadPreviewWindowViewModel();
                     win.Show();
                     

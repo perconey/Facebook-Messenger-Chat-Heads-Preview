@@ -9,6 +9,16 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 {
     public class HeadPreviewWindowViewModel : INotifyPropertyChanged
     {
+        private string _imgpath;
+        public string imgpath
+        {
+            get { return _imgpath; }
+            set
+            {
+                _imgpath = value;
+                NotifyPropertyChanged(imgpath);
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
