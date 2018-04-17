@@ -12,6 +12,7 @@
         <ViewModel:HeadPreviewWindowViewModel/>
     </Window.DataContext>
     <Grid>
-        
+        <Image Source="{Binding imgpath}" HorizontalAlignment="Left" Height="226" Margin="78,94,0,0" VerticalAlignment="Top" Width="244"/>
+
     </Grid>
 </Window>

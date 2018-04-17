@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Input;
+using FacebookChatHeadsPreviewer;
+using FacebookChatHeadsPreviewer.Views;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -40,7 +42,10 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 //image is square
                 if(validator.isEligible)
                 {
-
+                    var win = new HeadPreviewWindow(img);
+                    win.DataContext = new HeadPreviewWindowViewModel();
+                    win.Show();
+                    
                 }
                 //image is not square
                 else

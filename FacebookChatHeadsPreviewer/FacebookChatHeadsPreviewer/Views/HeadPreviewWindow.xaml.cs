@@ -19,7 +19,7 @@ namespace FacebookChatHeadsPreviewer.Views
     /// </summary>
     public partial class HeadPreviewWindow : Window
     {
-        public HeadPreviewWindow()
+        public HeadPreviewWindow(System.Drawing.Image img)
         {
             InitializeComponent();
         }
