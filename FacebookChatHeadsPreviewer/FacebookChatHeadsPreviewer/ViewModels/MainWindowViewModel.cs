@@ -13,11 +13,30 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         //debug
         public string check { get; set; }
 
+        private string _windowState;
+
+        public Action CloseAction { get; set; }
+
         public ICommand SelectFileClick { get; set; }
         public ICommand DebugButtonClick { get; set; }
 
+        public string WindowState
+        {
+            get
+            {
+                return _windowState;
+            }
+            set
+            {
+                _windowState = value;
+                NotifyPropertyChanged("WindowState");
+            }
+        }
+        
+
         public MainWindowViewModel()
         {
+            _windowState = "Visible";
             SelectFileClick = new RelayCommand(onSelectFileClick, o => true);
             DebugButtonClick = new RelayCommand(onDebugButtonClick, o => true);
         }
@@ -45,11 +64,12 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 //image is square
                 if(validator.isEligible)
                 {
+                    WindowState = "Hidden";
                     var win = new HeadPreviewWindow();
 
                     win.DataContext = new HeadPreviewWindowViewModel(path);
                     win.Show();
-                    
+                    CloseAction();
                 }
                 //image is not square
                 else

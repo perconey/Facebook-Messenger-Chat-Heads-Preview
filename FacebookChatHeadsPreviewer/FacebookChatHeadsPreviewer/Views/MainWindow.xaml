@@ -6,7 +6,7 @@
         xmlns:ViewModel="clr-namespace:FacebookChatHeadsPreviewer.ViewModels"
         mc:Ignorable="d"
         Title="FB Messenger Chat Heads Preview" Background="Transparent"
-        AllowsTransparency="True" OpacityMask="White" WindowStyle="None" Height="400" Width="400" ResizeMode="NoResize">
+        AllowsTransparency="True" OpacityMask="White" WindowStyle="None" Visibility="{Binding WindowState}" Height="400" Width="400" ResizeMode="NoResize">
     <Window.DataContext>
         <ViewModel:MainWindowViewModel/>
     </Window.DataContext>
