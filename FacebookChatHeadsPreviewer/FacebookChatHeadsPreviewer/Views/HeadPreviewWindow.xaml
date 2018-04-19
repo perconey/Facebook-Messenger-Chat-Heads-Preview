@@ -7,12 +7,41 @@
         xmlns:ViewModel="clr-namespace:FacebookChatHeadsPreviewer.ViewModels"
         mc:Ignorable="d"
         Title="FB Messenger Chat Heads Preview" Background="Transparent"
-        AllowsTransparency="True" OpacityMask="White" WindowStyle="None" Height="400" Width="400" ResizeMode="NoResize">
+        AllowsTransparency="True" OpacityMask="White" WindowStyle="None" Height="803.838" Width="803.838" ResizeMode="NoResize">
     <Window.DataContext>
         <ViewModel:HeadPreviewWindowViewModel/>
     </Window.DataContext>
     <Grid>
-        <Image Source="{Binding imgpath}" HorizontalAlignment="Left" Height="226" Margin="78,94,0,0" VerticalAlignment="Top" Width="244"/>
+
+        <Image Source="/Resources\homescreen.png" Margin="-37,0,324,9"/>
+
+        <Image Source="{Binding imgpath}"  Height="200" Width="200" Margin="512,27,92,577">
+            <Image.Clip>
+                <EllipseGeometry 
+                    RadiusX="100"
+                    RadiusY="100"
+                    Center="100,100"/>
+            </Image.Clip>
+        </Image>
+
+        <Image Source="{Binding imgpath}" Height="88" Width="88" Margin="314,194,402,522">
+            <Image.Clip>
+                <EllipseGeometry 
+                    RadiusX="44"
+                    RadiusY="44"
+                    Center="47,43"/>
+            </Image.Clip>
+        </Image>
+
+        <!--<Ellipse Width="100" Height="100" Margin="485,300,219,404">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="{Binding imgpath}"/>
+            </Ellipse.Fill>
+        </Ellipse>-->
+        
+       
 
     </Grid>
+
+
 </Window>

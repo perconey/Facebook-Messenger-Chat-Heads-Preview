@@ -38,10 +38,8 @@
                 <ImageBrush ImageSource="/Resources/qmbutton.png"></ImageBrush>
             </Button.Background>
         </Button>
-        <Button Content="Debugton" Command="{Binding DebugButtonClick}" HorizontalAlignment="Left" Margin="89,143,0,0" VerticalAlignment="Top" Width="75"/>
-
-
-
+        
+        <!--<Button Content="Debugton" Command="{Binding DebugButtonClick}" HorizontalAlignment="Left" Margin="89,143,0,0" VerticalAlignment="Top" Width="75"/>-->
 
     </Grid>
 </Window>

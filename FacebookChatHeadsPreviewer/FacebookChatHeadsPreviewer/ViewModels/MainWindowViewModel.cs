@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows;
 using System.Windows.Input;
 using FacebookChatHeadsPreviewer.Views;
+using System;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -25,6 +26,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         {
             MessageBox.Show(check);
         }
+
 
         public void onSelectFileClick(object o)
         {
