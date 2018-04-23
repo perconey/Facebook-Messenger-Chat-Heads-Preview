@@ -39,6 +39,31 @@
             </Button.Background>
         </Button>
         
+        <TextBox HorizontalAlignment="Left" Height="19" Margin="66,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
+            <TextBox.Style>
+            <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                <Style.Resources>
+                    <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                        <VisualBrush.Visual>
+                            <Label Content="Enter Facebook Profile Url" Foreground="Blue" />
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Style.Resources>
+                <Style.Triggers>
+                    <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                    </Trigger>
+                    <Trigger Property="Text" Value="{x:Null}">
+                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                    </Trigger>
+                    <Trigger Property="IsKeyboardFocused" Value="True">
+                        <Setter Property="Background" Value="White" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            </TextBox.Style>
+        </TextBox>
+
         <!--<Button Content="Debugton" Command="{Binding DebugButtonClick}" HorizontalAlignment="Left" Margin="89,143,0,0" VerticalAlignment="Top" Width="75"/>-->
 
     </Grid>
