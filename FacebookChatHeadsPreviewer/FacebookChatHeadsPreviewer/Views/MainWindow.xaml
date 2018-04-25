@@ -66,5 +66,10 @@
 
         <!--<Button Content="Debugton" Command="{Binding DebugButtonClick}" HorizontalAlignment="Left" Margin="89,143,0,0" VerticalAlignment="Top" Width="75"/>-->
 
+        <Button Command="{Binding SelectFileClick}" Style="{DynamicResource NMOStyle}" HorizontalAlignment="Left" Height="22" Margin="298,82,0,0" VerticalAlignment="Top" Width="22">
+            <Button.Background>
+                <ImageBrush ImageSource="/Resources/searchIcon.png"></ImageBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

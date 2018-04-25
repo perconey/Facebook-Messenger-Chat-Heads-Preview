@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -19,7 +20,6 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public HeadPreviewWindowViewModel()
         {
-
         }
 
         public string imgpath
