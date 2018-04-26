@@ -15,6 +15,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         public string check { get; set; }
 
         private string _windowState;
+        private WebBrowser web = new WebBrowser();
 
         public Action CloseAction { get; set; }
 
@@ -43,8 +44,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             DebugButtonClick = new RelayCommand(onDebugButtonClick, o => true);
             SearchButtonClick = new RelayCommand(onSearchButtonClick, o => true);
 
-            var w = new WebBrowser();
-            w.Navigate("https://findmyfbid.com/");
+            web.Navigate("https://findmyfbid.com/");
         }
 
         public void onDebugButtonClick(object o)
@@ -54,7 +54,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public void onSearchButtonClick(object o)
         {
-            // implement id searching and image scraping
+            var elem = web.Document
         }
 
 
