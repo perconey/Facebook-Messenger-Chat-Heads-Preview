@@ -5,7 +5,6 @@ using System.Windows;
 using System.Windows.Input;
 using FacebookChatHeadsPreviewer.Views;
 using System;
-using System.Windows.Controls;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -15,7 +14,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         public string check { get; set; }
 
         private string _windowState;
-        private WebBrowser web = new WebBrowser();
+        private System.Windows.Controls.WebBrowser web = new System.Windows.Controls.WebBrowser();
 
         public Action CloseAction { get; set; }
 
@@ -43,7 +42,6 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             SelectFileClick = new RelayCommand(onSelectFileClick, o => true);
             DebugButtonClick = new RelayCommand(onDebugButtonClick, o => true);
             SearchButtonClick = new RelayCommand(onSearchButtonClick, o => true);
-
             web.Navigate("https://findmyfbid.com/");
         }
 
@@ -54,7 +52,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public void onSearchButtonClick(object o)
         {
-            var elem = web.Document
+            
         }
 
 
