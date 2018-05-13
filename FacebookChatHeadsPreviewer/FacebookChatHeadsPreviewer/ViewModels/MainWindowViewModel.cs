@@ -42,7 +42,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             SelectFileClick = new RelayCommand(onSelectFileClick, o => true);
             DebugButtonClick = new RelayCommand(onDebugButtonClick, o => true);
             SearchButtonClick = new RelayCommand(onSearchButtonClick, o => true);
-            web.Navigate("https://findmyfbid.com/");
+            var fbrecieve = new FacebookProfilePhotoLoader();
         }
 
         public void onDebugButtonClick(object o)

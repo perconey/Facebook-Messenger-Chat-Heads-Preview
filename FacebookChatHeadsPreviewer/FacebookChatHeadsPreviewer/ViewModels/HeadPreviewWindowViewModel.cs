@@ -20,6 +20,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public HeadPreviewWindowViewModel()
         {
+
         }
 
         public string imgpath
