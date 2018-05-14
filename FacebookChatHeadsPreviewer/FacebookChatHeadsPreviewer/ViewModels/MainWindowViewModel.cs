@@ -12,9 +12,12 @@ namespace FacebookChatHeadsPreviewer.ViewModels
     {
         //debug
         public string check { get; set; }
+        //
 
+        private FacebookProfilePhotoLoader _loader = new FacebookProfilePhotoLoader();       
+
+        private string _searchBoxText;
         private string _windowState;
-        private System.Windows.Controls.WebBrowser web = new System.Windows.Controls.WebBrowser();
 
         public Action CloseAction { get; set; }
 
@@ -34,7 +37,23 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 NotifyPropertyChanged("WindowState");
             }
         }
-        
+
+        public string SearchBoxText
+        {
+            get => _searchBoxText;
+            set
+            {
+                NotifyPropertyChanged("SearchBoxText");
+                _searchBoxText = value;
+            }
+
+        }
+
+        internal FacebookProfilePhotoLoader Loader
+        {
+            get => _loader;
+            set => _loader = value;
+        }
 
         public MainWindowViewModel()
         {
@@ -52,7 +71,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public void onSearchButtonClick(object o)
         {
-            
+            //Loader.SearchByUrl(SearchBoxText);
+            MessageBox.Show(Loader.SearchByUrl(SearchBoxText));
         }
 
 
