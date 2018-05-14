@@ -43,8 +43,7 @@ namespace FacebookChatHeadsPreviewer.Logic
                 resp.Close();
                 readStream.Close();
             }
-            Regex.Match(data, "");
-            return data;
+            return Regex.Match(data, @"(?<=fb://profile/)(\d{15})").ToString();
         }
     }
 }
