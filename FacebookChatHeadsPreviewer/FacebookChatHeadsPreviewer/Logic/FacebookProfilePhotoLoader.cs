@@ -7,18 +7,27 @@ using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FacebookChatHeadsPreviewer.Logic
 {
     class FacebookProfilePhotoLoader
     {
-        
+        //http://graph.facebook.com/id/picture?type=large
+
         public FacebookProfilePhotoLoader()
         {
 
         }
 
-        public string SearchByUrl(string urlAddress)
+        private string _id;
+
+        private String Id
+        {
+            get;
+            set;
+        }
+        public void SearchByUrl(string urlAddress)
         {
             string data = "Error";
             var req = (HttpWebRequest)WebRequest.Create(urlAddress);
@@ -43,7 +52,11 @@ namespace FacebookChatHeadsPreviewer.Logic
                 resp.Close();
                 readStream.Close();
             }
-            return Regex.Match(data, @"(?<=fb://profile/)(\d{15})").ToString();
+            var reg = Regex.Match(data, @"(?<=fb://profile/)(\d{15})");
+            if (reg.Success)
+                Id = reg.Value;
+            else
+                MessageBox.Show("There was an error while searching for facebook id");
         }
     }
 }
