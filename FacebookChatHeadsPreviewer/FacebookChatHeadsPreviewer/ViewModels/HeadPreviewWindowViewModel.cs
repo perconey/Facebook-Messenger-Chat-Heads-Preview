@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FacebookChatHeadsPreviewer.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -13,9 +14,17 @@ namespace FacebookChatHeadsPreviewer.ViewModels
     {
         private string _imgpath;
 
-        public HeadPreviewWindowViewModel(String path)
+        public HeadPreviewWindowViewModel(String path, ImageSourceType type)
         {
-            imgpath = path;
+            switch(type)
+            {
+                case ImageSourceType.FilePath:
+                    imgpath = path;
+                    break;
+                case ImageSourceType.Url:
+
+                    break;
+            }
         }
 
         public HeadPreviewWindowViewModel()

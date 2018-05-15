@@ -68,6 +68,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Enums\ImageSourceType.cs" />
     <Compile Include="Logic\FacebookProfilePhotoLoader.cs" />
     <Compile Include="Logic\ImageInfoValidator.cs" />
     <Compile Include="ViewModels\HeadPreviewWindowViewModel.cs" />

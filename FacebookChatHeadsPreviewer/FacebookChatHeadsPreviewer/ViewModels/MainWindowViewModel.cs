@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using FacebookChatHeadsPreviewer.Views;
 using System;
+using FacebookChatHeadsPreviewer.Enums;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -71,8 +72,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public void onSearchButtonClick(object o)
         {
-            //Loader.SearchByUrl(SearchBoxText);
-            MessageBox.Show(Loader.SearchByUrl(SearchBoxText));
+            Loader.SearchByUrl(SearchBoxText);
         }
 
 
@@ -96,7 +96,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                     WindowState = "Hidden";
                     var win = new HeadPreviewWindow();
 
-                    win.DataContext = new HeadPreviewWindowViewModel(path);
+                    win.DataContext = new HeadPreviewWindowViewModel(path, ImageSourceType.FilePath);
                     win.Show();
                     CloseAction();
                 }
