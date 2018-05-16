@@ -20,13 +20,26 @@ namespace FacebookChatHeadsPreviewer.Logic
 
         }
 
-        private string _id;
 
-        private String Id
+        private string _id = "";
+
+        public String Id
         {
-            get;
-            set;
+            get
+            {
+                return _id;
+            }
+            set => _id = value;
         }
+
+        public bool IdGood()
+        {
+            if (Id != "")
+                return true;
+            else
+                return false;
+        }
+
         public void SearchByUrl(string urlAddress)
         {
             string data = "Error";

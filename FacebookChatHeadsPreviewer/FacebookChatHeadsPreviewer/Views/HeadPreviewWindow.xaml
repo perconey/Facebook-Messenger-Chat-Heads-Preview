@@ -15,7 +15,7 @@
 
         <Image Source="/Resources\homescreen.png" Margin="-37,0,324,9"/>
 
-        <Image Source="{Binding imgpath}"  Height="200" Width="200" Margin="512,27,92,577">
+        <Image Name="face" Source="{Binding imgpath}"  Height="200" Width="200" Margin="512,27,92,577">
             <Image.Clip>
                 <EllipseGeometry 
                     RadiusX="100"

@@ -73,6 +73,14 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         public void onSearchButtonClick(object o)
         {
             Loader.SearchByUrl(SearchBoxText);
+            if (Loader.IdGood())
+            {
+                WindowState = "Hidden";
+                var win = new HeadPreviewWindow();
+                win.DataContext = new HeadPreviewWindowViewModel(win);
+                win.Show();
+                CloseAction();
+            }
         }
 
 
