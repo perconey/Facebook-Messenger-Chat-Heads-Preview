@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -23,15 +24,18 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 case ImageSourceType.FilePath:
                     imgpath = path;
                     break;
-                case ImageSourceType.Url:
-                    thiswin.face = 
-                    break;
             }
         }
 
-        public HeadPreviewWindowViewModel(HeadPreviewWindow win)
+        public HeadPreviewWindowViewModel(HeadPreviewWindow win, 
+            BitmapImage img)
         {
             thiswin = win;
+            thiswin.face.Source = img;
+        }
+        public HeadPreviewWindowViewModel()
+        {
+
         }
 
         public string imgpath

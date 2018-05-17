@@ -6,6 +6,7 @@ using System.Windows.Input;
 using FacebookChatHeadsPreviewer.Views;
 using System;
 using FacebookChatHeadsPreviewer.Enums;
+using System.Windows.Media.Imaging;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -77,7 +78,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             {
                 WindowState = "Hidden";
                 var win = new HeadPreviewWindow();
-                win.DataContext = new HeadPreviewWindowViewModel(win);
+                win.DataContext = new HeadPreviewWindowViewModel(win,
+                    Loader.FetchImage());
                 win.Show();
                 CloseAction();
             }

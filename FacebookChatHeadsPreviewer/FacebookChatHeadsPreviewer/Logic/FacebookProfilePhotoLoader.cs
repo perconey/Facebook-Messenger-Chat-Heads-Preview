@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace FacebookChatHeadsPreviewer.Logic
 {
@@ -38,6 +40,36 @@ namespace FacebookChatHeadsPreviewer.Logic
                 return true;
             else
                 return false;
+        }
+
+        public BitmapImage FetchImage()
+        {
+            var image = new BitmapImage();
+            int BytesToRead = 100;
+
+            WebRequest request = WebRequest.Create(new Uri($"http://graph.facebook.com/{Id}/picture?type=large", UriKind.Absolute));
+            request.Timeout = -1;
+            WebResponse response = request.GetResponse();
+            Stream responseStream = response.GetResponseStream();
+            BinaryReader reader = new BinaryReader(responseStream);
+            MemoryStream memoryStream = new MemoryStream();
+
+            byte[] bytebuffer = new byte[BytesToRead];
+            int bytesRead = reader.Read(bytebuffer, 0, BytesToRead);
+
+            while (bytesRead > 0)
+            {
+                memoryStream.Write(bytebuffer, 0, bytesRead);
+                bytesRead = reader.Read(bytebuffer, 0, BytesToRead);
+            }
+
+            image.BeginInit();
+            memoryStream.Seek(0, SeekOrigin.Begin);
+
+            image.StreamSource = memoryStream;
+            image.EndInit();
+
+            return image;
         }
 
         public void SearchByUrl(string urlAddress)
