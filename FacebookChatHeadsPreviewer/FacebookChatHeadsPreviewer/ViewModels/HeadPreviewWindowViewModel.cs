@@ -31,7 +31,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             BitmapImage img)
         {
             thiswin = win;
-            thiswin.face.Source = img;
+            thiswin.Big.Source = img;
+            thiswin.Bubble.Source = img;
         }
         public HeadPreviewWindowViewModel()
         {

@@ -15,7 +15,7 @@
 
         <Image Source="/Resources\homescreen.png" Margin="-37,0,324,9"/>
 
-        <Image Name="face" Source="{Binding imgpath}"  Height="200" Width="200" Margin="512,27,92,577">
+        <Image Name="Big" Source="{Binding imgpath}"  Height="200" Width="200" Margin="512,27,92,577">
             <Image.Clip>
                 <EllipseGeometry 
                     RadiusX="100"
@@ -24,7 +24,7 @@
             </Image.Clip>
         </Image>
 
-        <Image Source="{Binding imgpath}" Height="88" Width="88" Margin="314,194,402,522">
+        <Image Name="Bubble"  Source="{Binding imgpath}" Height="88" Width="88" Margin="314,194,402,522">
             <Image.Clip>
                 <EllipseGeometry 
                     RadiusX="44"

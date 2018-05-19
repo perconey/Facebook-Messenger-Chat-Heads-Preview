@@ -137,5 +137,8 @@
   <ItemGroup>
     <Resource Include="Resources\searchIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\faceChecker.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
