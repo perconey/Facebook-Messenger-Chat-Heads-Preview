@@ -24,15 +24,15 @@
         </Image>
 
 
-        <Image HorizontalAlignment="Left" Height="621" Margin="45,174,0,0" Source="/Resources/homescreen.png" VerticalAlignment="Top" Width="621"/>
-           <!--Selected photos-->
-        <Image Name="ChatList" HorizontalAlignment="Left" Margin="73,453,0,0" Source="/Resources/placeholder.png" VerticalAlignment="Top" Width="38" Height="38"/>
-        <Image Name="ChatFloat" HorizontalAlignment="Left" Margin="135,372,0,0" Source="/Resources/placeholder.png" VerticalAlignment="Top" Width="44" Height="44"/>
-       
-        <Image HorizontalAlignment="Left" Height="497" Margin="61,240,0,0" Source="/Resources/faceChecker.png" VerticalAlignment="Top" Width="497"/>
-          <!--Selected name labels-->
-        <Label Name="NameTop" Content="{Binding Name}" HorizontalAlignment="Left" Height="25" Margin="119,452,0,0" VerticalAlignment="Top" Width="74" FontFamily="Tahoma" FontSize="10"/>
-        <Label Name="NameList" Content="{Binding Name}" HorizontalAlignment="Left" Height="25" Margin="137,416,0,0" VerticalAlignment="Top" Width="74" FontFamily="Tahoma" FontSize="11"/>
+        <Image HorizontalAlignment="Left" Height="781" Margin="45,14,-22,0" Source="/Resources/homescreen.png" VerticalAlignment="Top" Width="781"/>
+        <!--Selected photos-->
+        <Image Name="ChatList" RenderOptions.BitmapScalingMode="LowQuality"  HorizontalAlignment="Left" Margin="80,365,0,0" VerticalAlignment="Top" Width="48" Height="47"/>
+        <Image Name="ChatFloat" HorizontalAlignment="Left" Margin="159,263,0,0" VerticalAlignment="Top" Width="55" Height="55"/>
+
+        <Image HorizontalAlignment="Left" Height="625" Margin="65,97,0,0" Source="/Resources/faceChecker.png" VerticalAlignment="Top" Width="625"/>
+        <!--Selected name labels-->
+        <Label Name="NameTop" Content="{Binding Name}" HorizontalAlignment="Left" Height="31" Margin="139,364,0,0" VerticalAlignment="Top" Width="92" FontFamily="Tahoma" FontSize="10"/>
+        <Label Name="NameList" Content="{Binding Name}" HorizontalAlignment="Left" Height="32" Margin="161,318,0,0" VerticalAlignment="Top" Width="92" FontFamily="Tahoma" FontSize="11"/>
 
 
         <!--<Ellipse Width="100" Height="100" Margin="485,300,219,404">

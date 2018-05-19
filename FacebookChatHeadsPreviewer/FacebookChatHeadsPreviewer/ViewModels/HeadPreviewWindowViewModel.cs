@@ -1,14 +1,7 @@
 ﻿using FacebookChatHeadsPreviewer.Enums;
 using FacebookChatHeadsPreviewer.Views;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
@@ -31,8 +24,9 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             BitmapImage img)
         {
             thiswin = win;
+            thiswin.ChatFloat.Source = img;
+            thiswin.ChatList.Source = img;
             thiswin.Big.Source = img;
-            thiswin.Bubble.Source = img;
         }
         public HeadPreviewWindowViewModel()
         {
@@ -53,7 +47,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public void NotifyPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke
+                (this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
