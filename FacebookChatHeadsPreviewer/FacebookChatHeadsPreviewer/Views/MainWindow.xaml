@@ -10,7 +10,7 @@
     <Window.DataContext>
         <ViewModel:MainWindowViewModel/>
     </Window.DataContext>
-    
+
     <Window.Resources>
         <Style x:Key="NMOStyle" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -34,35 +34,57 @@
 
     <Grid>
         <Image Source="/Resources/cm.png" Margin="66,-65,98,225"/>
-        
+
         <Button Command="{Binding SelectFileClick}" Style="{DynamicResource NMOStyle}" HorizontalAlignment="Left" Height="50" Margin="307,30,0,0" VerticalAlignment="Top" Width="50">
             <Button.Background>
                 <ImageBrush ImageSource="/Resources/qmbutton.png"></ImageBrush>
             </Button.Background>
         </Button>
-        
+
         <TextBox Background="White" Text="{Binding SearchBoxText, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="19" Margin="66,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
             <TextBox.Style>
-            <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-                <Style.Resources>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
                         <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
                         </VisualBrush>
-                </Style.Resources>
-                <Style.Triggers>
-                    <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                    </Trigger>
-                    <Trigger Property="Text" Value="{x:Null}">
-                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
-                    </Trigger>
-                    <Trigger Property="IsKeyboardFocused" Value="True">
-                        <Setter Property="Background" Value="White" />
-                    </Trigger>
-                </Style.Triggers>
-            </Style>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
             </TextBox.Style>
         </TextBox>
 
+        <!--Name-->
+        <TextBox Background="White" Text="{Binding SearchBoxText, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="19" Margin="66,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
         <!--<Button Content="Debugton" Command="{Binding DebugButtonClick}" HorizontalAlignment="Left" Margin="89,143,0,0" VerticalAlignment="Top" Width="75"/>-->
 
         <Button Command="{Binding SearchButtonClick}" Style="{DynamicResource NMOStyle}" HorizontalAlignment="Left" Height="22" Margin="298,82,0,0" VerticalAlignment="Top" Width="22">

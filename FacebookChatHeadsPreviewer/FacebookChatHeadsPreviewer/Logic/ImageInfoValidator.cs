@@ -6,12 +6,7 @@ namespace FacebookChatHeadsPreviewer.Logic
 {
     public class ImageInfoValidator
     {
-        private bool _isEligible = false;
-        public bool isEligible
-        {
-            get;
-            set;
-        }
+        public bool isEligible { get; set; } = false;
 
         public ImageInfoValidator(Image img)
         {
