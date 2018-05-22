@@ -1,4 +1,5 @@
 ﻿using FacebookChatHeadsPreviewer.Enums;
+using FacebookChatHeadsPreviewer.Models;
 using FacebookChatHeadsPreviewer.Views;
 using System;
 using System.ComponentModel;
@@ -10,7 +11,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
     {
         private string _imgpath;
         public HeadPreviewWindow thiswin;
-        public HeadPreviewWindowViewModel(String path, ImageSourceType type)
+        public HeadPreviewWindowViewModel(String path, 
+            ImageSourceType type, ProfileData data)
         {
             switch(type)
             {
@@ -21,7 +23,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         }
 
         public HeadPreviewWindowViewModel(HeadPreviewWindow win, 
-            BitmapImage img)
+            BitmapImage img, ProfileData data)
         {
             thiswin = win;
             thiswin.ChatFloat.Source = img;

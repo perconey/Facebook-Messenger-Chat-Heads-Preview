@@ -18,6 +18,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         private string _searchBoxText;
         private string _windowState;
+        private string _username;
 
         public Action CloseAction { get; set; }
 
@@ -48,6 +49,16 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 NotifyPropertyChanged("SearchBoxText");
                 _searchBoxText = value;
             }
+        }
+
+        public string Username
+        {
+            get => _username;
+            set
+            {
+                NotifyPropertyChanged("Username");
+                _username = value;
+            }
 
         }
 
@@ -70,12 +81,13 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         public void onSearchButtonClick(object o)
         {
             Loader.SearchByUrl(SearchBoxText);
+
             if (Loader.IdGood())
             {
                 WindowState = "Hidden";
                 var win = new HeadPreviewWindow();
                 win.DataContext = new HeadPreviewWindowViewModel(win,
-                    Loader.FetchImage());
+                    Loader.FetchImage(), userData);
                 win.Show();
                 CloseAction();
             }
@@ -102,7 +114,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                     WindowState = "Hidden";
                     var win = new HeadPreviewWindow();
 
-                    win.DataContext = new HeadPreviewWindowViewModel(path, ImageSourceType.FilePath);
+                    win.DataContext = new HeadPreviewWindowViewModel(path, 
+                        ImageSourceType.FilePath, userData);
                     win.Show();
                     CloseAction();
                 }
@@ -122,7 +135,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public void NotifyPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, 
+                new PropertyChangedEventArgs(propertyName));
         }
     }
 }

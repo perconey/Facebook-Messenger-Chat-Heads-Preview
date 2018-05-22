@@ -64,7 +64,7 @@
         </TextBox>
 
         <!--Name-->
-        <TextBox Background="White" Text="{Binding SearchBoxText, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="19" Margin="66,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
+        <TextBox Background="White" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="19" Margin="66,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
             <TextBox.Style>
                 <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                     <Style.Resources>
