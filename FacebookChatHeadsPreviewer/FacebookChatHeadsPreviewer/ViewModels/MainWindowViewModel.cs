@@ -7,6 +7,7 @@ using FacebookChatHeadsPreviewer.Views;
 using System;
 using FacebookChatHeadsPreviewer.Enums;
 using System.Windows.Media.Imaging;
+using FacebookChatHeadsPreviewer.Models;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
@@ -14,9 +15,6 @@ namespace FacebookChatHeadsPreviewer.ViewModels
     {
         //debug
         public string check { get; set; }
-        //
-
-        private FacebookProfilePhotoLoader _loader = new FacebookProfilePhotoLoader();       
 
         private string _searchBoxText;
         private string _windowState;
@@ -26,6 +24,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
         public ICommand SelectFileClick { get; set; }
         public ICommand DebugButtonClick { get; set; }
         public ICommand SearchButtonClick { get; set; }
+
+        public ProfileData userData = new ProfileData();
 
         public string WindowState
         {
@@ -51,11 +51,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         }
 
-        internal FacebookProfilePhotoLoader Loader
-        {
-            get => _loader;
-            set => _loader = value;
-        }
+        internal FacebookProfilePhotoLoader Loader { get; set; } = new FacebookProfilePhotoLoader();
 
         public MainWindowViewModel()
         {

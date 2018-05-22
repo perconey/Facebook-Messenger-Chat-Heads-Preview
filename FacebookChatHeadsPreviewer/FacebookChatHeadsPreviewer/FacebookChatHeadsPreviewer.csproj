@@ -71,6 +71,7 @@
     <Compile Include="Enums\ImageSourceType.cs" />
     <Compile Include="Logic\FacebookProfilePhotoLoader.cs" />
     <Compile Include="Logic\ImageInfoValidator.cs" />
+    <Compile Include="Models\ProfileData.cs" />
     <Compile Include="ViewModels\HeadPreviewWindowViewModel.cs" />
     <Compile Include="Views\HeadPreviewWindow.xaml.cs">
       <DependentUpon>HeadPreviewWindow.xaml</DependentUpon>
@@ -122,9 +123,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\qmbutton.png" />
   </ItemGroup>
