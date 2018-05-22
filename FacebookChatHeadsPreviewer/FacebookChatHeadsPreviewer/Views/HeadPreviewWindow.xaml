@@ -30,10 +30,11 @@
         <Image Name="ChatFloat" Source="{Binding imgpath}" HorizontalAlignment="Left" Margin="159,263,0,0" VerticalAlignment="Top" Width="55" Height="55"/>
 
         <Image HorizontalAlignment="Left" Height="625" Margin="65,97,0,0" Source="/Resources/faceChecker.png" VerticalAlignment="Top" Width="625"/>
-        
+
         <!--Selected name labels-->
-        <Label Name="NameTop" Content="{Binding Name}" HorizontalAlignment="Left" Height="31" Margin="139,364,0,0" VerticalAlignment="Top" Width="92" FontFamily="Tahoma" FontSize="10"/>
-        <Label Name="NameList" Content="{Binding Name}" HorizontalAlignment="Left" Height="32" Margin="161,318,0,0" VerticalAlignment="Top" Width="92" FontFamily="Tahoma" FontSize="11"/>
+        <Label Name="NameTop" Content="{Binding Name}" HorizontalAlignment="Left" Height="31" Margin="138,364,0,0" VerticalAlignment="Top" Width="92" FontFamily="Roboto" FontSize="14"/>
+        <Label Name="NameList" Content="{Binding Name}" HorizontalAlignment="Left" Height="25" Margin="162,322,0,0" VerticalAlignment="Top" Width="70" FontFamily="Roboto" FontSize="14">
+        </Label>
 
 
         <!--<Ellipse Width="100" Height="100" Margin="485,300,219,404">

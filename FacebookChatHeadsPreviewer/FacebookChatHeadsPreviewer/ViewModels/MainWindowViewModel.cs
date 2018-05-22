@@ -80,6 +80,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
         public void onSearchButtonClick(object o)
         {
+            userData.Name = Username;
             Loader.SearchByUrl(SearchBoxText);
 
             if (Loader.IdGood())
@@ -101,6 +102,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 DefaultExt = ".png",
                 Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg"
             };
+
             bool? dialogOK = dlg.ShowDialog();
             if(dialogOK == true)
             {
@@ -111,6 +113,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
                 //image is square
                 if(validator.isEligible)
                 {
+                    userData.Name = Username;
                     WindowState = "Hidden";
                     var win = new HeadPreviewWindow();
 

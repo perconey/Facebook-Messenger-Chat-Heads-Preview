@@ -10,14 +10,20 @@ namespace FacebookChatHeadsPreviewer.ViewModels
     public class HeadPreviewWindowViewModel : INotifyPropertyChanged
     {
         private string _imgpath;
+        private string _name;
+
         public HeadPreviewWindow thiswin;
+        public ProfileData profile = null;
+
         public HeadPreviewWindowViewModel(String path, 
             ImageSourceType type, ProfileData data)
         {
-            switch(type)
+            profile = data;
+            switch (type)
             {
                 case ImageSourceType.FilePath:
                     imgpath = path;
+                    Name = profile.Name;
                     break;
             }
         }
@@ -29,10 +35,19 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             thiswin.ChatFloat.Source = img;
             thiswin.ChatList.Source = img;
             thiswin.Big.Source = img;
+            profile = data;
+           // BindTextFields();
         }
+
         public HeadPreviewWindowViewModel()
         {
 
+        }
+
+        public void BindTextFields()
+        {
+            thiswin.NameList.Content = profile.Name;
+            thiswin.NameTop.Content = profile.Name;
         }
 
         public string imgpath
@@ -42,6 +57,16 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             {
                 _imgpath = value;
                 NotifyPropertyChanged(imgpath);
+            }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                _name = value;
+                NotifyPropertyChanged(Name);
             }
         }
 
