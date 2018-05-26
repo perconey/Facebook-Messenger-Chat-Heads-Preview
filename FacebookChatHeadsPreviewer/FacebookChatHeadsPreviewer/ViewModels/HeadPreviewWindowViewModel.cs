@@ -36,7 +36,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             thiswin.ChatList.Source = img;
             thiswin.Big.Source = img;
             profile = data;
-           // BindTextFields();
+            BindTextFields();
         }
 
         public HeadPreviewWindowViewModel()
