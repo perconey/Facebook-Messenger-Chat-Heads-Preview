@@ -85,6 +85,8 @@ namespace FacebookChatHeadsPreviewer.ViewModels
 
             if (Loader.IdGood())
             {
+                //On success when retrieving data from facebook
+                userData.Name = Loader.Name;
                 WindowState = "Hidden";
                 var win = new HeadPreviewWindow();
                 win.DataContext = new HeadPreviewWindowViewModel(win,

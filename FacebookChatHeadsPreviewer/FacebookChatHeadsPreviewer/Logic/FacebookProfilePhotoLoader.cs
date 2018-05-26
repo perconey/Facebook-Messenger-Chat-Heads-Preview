@@ -24,7 +24,11 @@ namespace FacebookChatHeadsPreviewer.Logic
 
 
         private string _id = "";
-
+        public string Name
+        {
+            get;
+            set;
+        }
         public String Id
         {
             get
@@ -100,7 +104,8 @@ namespace FacebookChatHeadsPreviewer.Logic
                     readStream.Close();
                 }
                 var regName = Regex.Match(data, "(?<=<title id=\"pageTitle\">)(\\w+)");
-                MessageBox.Show(regName.Value);
+                Name = regName.Value;
+
                 var reg = Regex.Match(data, @"(?<=fb://profile/)(\d{15})");
                 if (reg.Success)
                     Id = reg.Value;
