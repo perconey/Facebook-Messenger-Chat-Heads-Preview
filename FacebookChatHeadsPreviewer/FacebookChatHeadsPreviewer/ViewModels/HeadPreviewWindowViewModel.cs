@@ -35,6 +35,7 @@ namespace FacebookChatHeadsPreviewer.ViewModels
             thiswin.ChatFloat.Source = img;
             thiswin.ChatList.Source = img;
             thiswin.Big.Source = img;
+            thiswin.Bubble.Source = img;
             profile = data;
             BindTextFields();
         }
