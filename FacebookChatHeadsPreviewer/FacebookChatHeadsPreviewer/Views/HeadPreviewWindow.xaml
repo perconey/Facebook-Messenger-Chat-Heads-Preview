@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FacebookChatHeadsPreviewer.Views"
         xmlns:ViewModel="clr-namespace:FacebookChatHeadsPreviewer.ViewModels"
         mc:Ignorable="d"
         Title="FB Messenger Chat Heads Preview" Background="Transparent"
@@ -28,10 +27,10 @@
         <Image HorizontalAlignment="Left" Height="781" Margin="511,10,-488,0" Source="/Resources/homescreen.png" VerticalAlignment="Top" Width="781"/>
 
         <!--Selected photos-->
-        <Image Name="ChatList" Source="{Binding imgpath}" RenderOptions.BitmapScalingMode="LowQuality"  HorizontalAlignment="Left" Margin="80,365,0,0" VerticalAlignment="Top" Width="48" Height="47"/>
-        <Image Name="ChatFloat" Source="{Binding imgpath}" HorizontalAlignment="Left" Margin="159,263,0,0" VerticalAlignment="Top" Width="55" Height="55"/>
+        <Image Name="ChatList" Source="{Binding imgpath}" RenderOptions.BitmapScalingMode="LowQuality"  HorizontalAlignment="Left" Margin="80,364,0,0" VerticalAlignment="Top" Width="49" Height="48"/>
+        <Image Name="ChatFloat" Source="{Binding imgpath}" HorizontalAlignment="Left" Margin="158,263,0,0" VerticalAlignment="Top" Width="56" Height="56"/>
 
-        <Image Name="Bubble" Source="{Binding imgpath}" HorizontalAlignment="Left" Margin="829,331,-86,0" VerticalAlignment="Top" Width="61" Height="62"/>
+        <Image Name="Bubble" Source="{Binding imgpath}" HorizontalAlignment="Left" Margin="828,331,0,0" VerticalAlignment="Top" Width="61" Height="62"/>
         <Image HorizontalAlignment="Left" Height="781" Margin="511,10,-488,0" Source="/Resources/frame.png" VerticalAlignment="Top" Width="781"/>
 
 
@@ -42,17 +41,5 @@
         <Label Name="NameTop" Content="{Binding Name}" HorizontalAlignment="Left" Height="31" Margin="138,364,0,0" VerticalAlignment="Top" Width="222" FontFamily="Roboto" FontSize="14"/>
         <Label Name="NameList" Content="{Binding Name}" HorizontalAlignment="Left" Height="25" Margin="162,322,0,0" VerticalAlignment="Top" Width="70" FontFamily="Roboto" FontSize="14">
         </Label>
-
-
-        <!--<Ellipse Width="100" Height="100" Margin="485,300,219,404">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="{Binding imgpath}"/>
-            </Ellipse.Fill>
-        </Ellipse>-->
-
-
-
     </Grid>
-
-
 </Window>

@@ -6,7 +6,6 @@ using System.Windows.Input;
 using FacebookChatHeadsPreviewer.Views;
 using System;
 using FacebookChatHeadsPreviewer.Enums;
-using System.Windows.Media.Imaging;
 using FacebookChatHeadsPreviewer.Models;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
