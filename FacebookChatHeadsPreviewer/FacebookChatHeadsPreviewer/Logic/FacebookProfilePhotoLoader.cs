@@ -99,6 +99,8 @@ namespace FacebookChatHeadsPreviewer.Logic
                     resp.Close();
                     readStream.Close();
                 }
+                var regName = Regex.Match(data, "(?<=<title id=\"pageTitle\">)(\\w+)");
+                MessageBox.Show(regName.Value);
                 var reg = Regex.Match(data, @"(?<=fb://profile/)(\d{15})");
                 if (reg.Success)
                     Id = reg.Value;
