@@ -124,6 +124,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\frame.png" />
     <Resource Include="Resources\mscreen.png" />
   </ItemGroup>
   <ItemGroup>
@@ -143,9 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\placeholder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\frame.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

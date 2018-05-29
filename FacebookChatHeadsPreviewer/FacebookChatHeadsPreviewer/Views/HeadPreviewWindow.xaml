@@ -23,8 +23,8 @@
         </Image>
 
 
-        <Image HorizontalAlignment="Left" Height="781" Margin="45,14,-22,0" Source="/Resources/homescreen.png" VerticalAlignment="Top" Width="781"/>
-        <Image HorizontalAlignment="Left" Height="781" Margin="511,10,-488,0" Source="/Resources/homescreen.png" VerticalAlignment="Top" Width="781"/>
+        <Image HorizontalAlignment="Left" Height="771" Margin="47,20,0,0" Source="/Resources/frame.png" VerticalAlignment="Top" Width="781"/>
+        <Image HorizontalAlignment="Left" Height="767" Margin="511,17,-332,0" Source="/Resources/frame.png" VerticalAlignment="Top" Width="781"/>
 
         <!--Selected photos-->
         <Image Name="ChatList" Source="{Binding imgpath}" RenderOptions.BitmapScalingMode="LowQuality"  HorizontalAlignment="Left" Margin="80,364,0,0" VerticalAlignment="Top" Width="49" Height="48"/>
