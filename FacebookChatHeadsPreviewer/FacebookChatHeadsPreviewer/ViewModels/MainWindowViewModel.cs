@@ -1,12 +1,12 @@
-﻿using FacebookChatHeadsPreviewer.Logic;
+﻿using FacebookChatHeadsPreviewer.Enums;
+using FacebookChatHeadsPreviewer.Logic;
+using FacebookChatHeadsPreviewer.Models;
+using FacebookChatHeadsPreviewer.Views;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Input;
-using FacebookChatHeadsPreviewer.Views;
-using System;
-using FacebookChatHeadsPreviewer.Enums;
-using FacebookChatHeadsPreviewer.Models;
 
 namespace FacebookChatHeadsPreviewer.ViewModels
 {
